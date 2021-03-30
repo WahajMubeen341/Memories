@@ -19,10 +19,14 @@ app.use(cors());
 
 app.use('/posts', postRoutes);
 
+app.get('/', (req,res) => {
+    res.send('Hello to API');
+})
+
 //www.mongodb.com/cloud/atlas
 
-//const CONNECTION_URL= 'mongodb+srv://wahajmubeen:bohemia420@cluster0.bth3z.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
-console.log(process.env.CONNECTION_URL, process.env.PORT);
+
+//console.log(process.env.CONNECTION_URL, process.env.PORT);
 
 const PORT= process.env.PORT || 5000;
 
